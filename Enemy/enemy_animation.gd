@@ -15,7 +15,9 @@ func _process(delta):
 	
 	#sprite.flip_h = enemy.velocity.x < 0
 	if enemy.velocity.x < 0:
-		sprite.set_flip_h(true)
+		sprite.flip_h = true
+	else:
+		sprite.flip_h = false
 
 	var animation_name = "walk"
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://cpfwpobhet2ms"]
+[gd_scene load_steps=71 format=3 uid="uid://cpfwpobhet2ms"]
 
 [ext_resource type="Script" path="res://Enemy/enemy.gd" id="1_gbrr8"]
 [ext_resource type="Texture2D" uid="uid://0p2ymj1pm5oh" path="res://Enemy/kira/base/idle.png" id="1_plv4u"]
@@ -13,7 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://ddm58km6cr43w" path="res://Enemy/kira/base/jump.png" id="9_f8pin"]
 [ext_resource type="Texture2D" uid="uid://bkhq71r1vgdin" path="res://Enemy/kira/base/kick.png" id="10_uclsa"]
 [ext_resource type="Texture2D" uid="uid://dedtol1bo2eka" path="res://Enemy/kira/base/scan.png" id="12_4dasj"]
-[ext_resource type="Script" path="res://Enemy/EnemyAnimation.gd" id="13_7rduf"]
+[ext_resource type="Script" path="res://Enemy/enemy_animation.gd" id="13_7rduf"]
+[ext_resource type="Script" path="res://Enemy/enemy_state_machine.gd" id="15_d8clo"]
+[ext_resource type="Script" path="res://Enemy/states/enemy_wander.gd" id="16_v0fut"]
+[ext_resource type="Script" path="res://Enemy/states/enemy_chase.gd" id="17_u3ot2"]
+[ext_resource type="Script" path="res://Enemy/states/enemy_idle.gd" id="18_ie41k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lla2g"]
 atlas = ExtResource("2_wekk3")
@@ -446,3 +450,18 @@ shape = SubResource("CapsuleShape2D_yywpy")
 [node name="EnemyAnimation" type="Node" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("13_7rduf")
 sprite = NodePath("../AnimatedSprite2D")
+
+[node name="EnemyStateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("15_d8clo")
+initial_state = NodePath("Wander")
+
+[node name="Wander" type="Node" parent="EnemyStateMachine"]
+script = ExtResource("16_v0fut")
+min_wander_time = 1.0
+max_wander_time = 5.0
+
+[node name="Chase" type="Node" parent="EnemyStateMachine"]
+script = ExtResource("17_u3ot2")
+
+[node name="Idle" type="Node" parent="EnemyStateMachine"]
+script = ExtResource("18_ie41k")

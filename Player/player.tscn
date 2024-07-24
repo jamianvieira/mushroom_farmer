@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_k8kcu"]
 [ext_resource type="Texture2D" uid="uid://dl1w6i7rajsci" path="res://Basic Charakter Spritesheet.png" id="2_q5m3f"]
-[ext_resource type="Script" path="res://Player/Player_Animation.gd" id="3_twqls"]
-[ext_resource type="Script" path="res://Player/Player_Movement.gd" id="4_5fsdr"]
+[ext_resource type="Script" path="res://Player/player_animation.gd" id="3_twqls"]
+[ext_resource type="Script" path="res://Player/player_movement.gd" id="4_5fsdr"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uf3qh"]
 radius = 6.0
@@ -164,7 +164,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="Area2D" groups=["Player"]]
 script = ExtResource("1_k8kcu")
 metadata/_edit_group_ = true
 
@@ -176,12 +176,13 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_nc4j1")
 animation = &"idle_left"
 
-[node name="Player_Animation" type="Node" parent="." node_paths=PackedStringArray("sprite", "movement")]
+[node name="PlayerAnimation" type="Node" parent="." node_paths=PackedStringArray("sprite", "movement")]
 script = ExtResource("3_twqls")
 sprite = NodePath("../AnimatedSprite2D")
-movement = NodePath("../Player_Movement")
+movement = NodePath("../PlayerMovement")
 
-[node name="Player_Movement" type="Node" parent="."]
+[node name="PlayerMovement" type="Node" parent="."]
 script = ExtResource("4_5fsdr")
+speed = 100
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
