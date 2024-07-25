@@ -21,6 +21,6 @@ shape = SubResource("CapsuleShape2D_4cdcm")
 scale = Vector2(0.75, 0.778846)
 texture = SubResource("CanvasTexture_kpa5q")
 region_enabled = true
-region_rect = Rect2(-0.0554543, 128.906, 16.7562, 15.9305)
+region_rect = Rect2(0, 128, 16, 16)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
