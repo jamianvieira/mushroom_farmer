@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://dd885bo8s32mm"]
+[gd_scene load_steps=24 format=3 uid="uid://dd885bo8s32mm"]
 
 [ext_resource type="Script" path="res://Player/player.gd" id="1_k8kcu"]
 [ext_resource type="Texture2D" uid="uid://dl1w6i7rajsci" path="res://Basic Charakter Spritesheet.png" id="2_q5m3f"]
 [ext_resource type="Script" path="res://Player/player_animation.gd" id="3_twqls"]
 [ext_resource type="Script" path="res://Player/player_movement.gd" id="4_5fsdr"]
+[ext_resource type="Script" path="res://Player/inventory.gd" id="5_hqok1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uf3qh"]
 radius = 6.0
@@ -164,7 +165,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="Area2D" groups=["Player"]]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_k8kcu")
 metadata/_edit_group_ = true
 
@@ -185,4 +186,5 @@ movement = NodePath("../PlayerMovement")
 script = ExtResource("4_5fsdr")
 speed = 100
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="Inventory" type="Node" parent="."]
+script = ExtResource("5_hqok1")

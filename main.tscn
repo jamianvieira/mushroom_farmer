@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://njatcbgebr2" path="res://grass_tile_set.tres" id="1_33xsv"]
 [ext_resource type="PackedScene" uid="uid://dd885bo8s32mm" path="res://Player/player.tscn" id="2_akmwx"]
-[ext_resource type="PackedScene" uid="uid://cpfwpobhet2ms" path="res://Enemy/enemy.tscn" id="3_1xw3b"]
+[ext_resource type="PackedScene" uid="uid://bamtk5gbeso5a" path="res://Items/button_mushroom.tscn" id="4_mq7nr"]
 
 [node name="TileMap" type="TileMap"]
 texture_filter = 1
@@ -15,5 +15,5 @@ layer_0/tile_data = PackedInt32Array(262147, 131076, 6, 327683, 65540, 6, 393219
 [node name="Player" parent="." instance=ExtResource("2_akmwx")]
 position = Vector2(146, 95)
 
-[node name="Enemy" parent="." instance=ExtResource("3_1xw3b")]
-position = Vector2(170.333, 95.6667)
+[node name="ButtonMushroom" parent="." instance=ExtResource("4_mq7nr")]
+position = Vector2(79.6667, 95.3333)

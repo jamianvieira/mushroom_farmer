@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bamtk5gbeso5a"]
+
+[ext_resource type="Script" path="res://Items/button_mushroom.gd" id="1_os0rm"]
+[ext_resource type="Texture2D" uid="uid://b7eqefbxyyino" path="res://nature_items.png" id="2_rebp0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4cdcm"]
+radius = 5.0
+height = 12.0
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_kpa5q"]
+diffuse_texture = ExtResource("2_rebp0")
+texture_filter = 1
+
+[node name="ButtonMushroom" type="Area2D"]
+script = ExtResource("1_os0rm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_4cdcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.778846)
+texture = SubResource("CanvasTexture_kpa5q")
+region_enabled = true
+region_rect = Rect2(-0.0554543, 128.906, 16.7562, 15.9305)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

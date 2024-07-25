@@ -1,5 +1,5 @@
 class_name Player
-extends Area2D
+extends CharacterBody2D
 
 signal hit
 
@@ -19,3 +19,8 @@ func start(pos):
 	position = pos
 	show()
 	$CollisionShape2D.disabled = false
+
+func item_pick_up(item_name: String):
+	print("picked up " + item_name)
+
+

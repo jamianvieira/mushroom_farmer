@@ -24,6 +24,7 @@ window/size/viewport_height=480
 
 folder_colors={
 "res://Enemy/": "red",
+"res://Items/": "blue",
 "res://Player/": "green"
 }
 

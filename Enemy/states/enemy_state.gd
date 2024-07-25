@@ -15,16 +15,13 @@ func _ready():
 func enter():
 	pass
 
-
 # When the state is active, this is essentially the _process() function
 func process_state(delta: float):
 	pass
 
-
 # When the state is active, this is essentially the _physics_process() function
 func physics_process_state(delta: float):
 	pass
-
 
 # Useful for cleaning up the state
 # For example, clearing any timers, disconnecting any signals, etc.
