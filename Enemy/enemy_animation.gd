@@ -21,7 +21,7 @@ func _process(delta):
 
 	var animation_name = "walk"
 	
-	if enemy.velocity.length() > 50:
+	if enemy.velocity.length() > 75:
 		animation_name = "run"
 
 	sprite.animation = animation_name
