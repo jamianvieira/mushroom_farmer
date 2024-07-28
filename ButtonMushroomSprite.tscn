@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cok7crpcycku1"]
-
-[ext_resource type="Texture2D" uid="uid://b7eqefbxyyino" path="res://nature_items.png" id="1_1wvkv"]
-
-[node name="ButtonMushroomSprite" type="Sprite2D"]
-texture_filter = 1
-texture = ExtResource("1_1wvkv")
-region_enabled = true
-region_rect = Rect2(0, 128, 16, 16)

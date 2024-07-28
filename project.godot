@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Mushroom Farmer"
-run/main_scene="res://main2.tscn"
+run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [display]
 
@@ -27,8 +26,12 @@ window/stretch/scale_mode="integer"
 
 folder_colors={
 "res://Enemy/": "red",
-"res://Items/": "blue",
-"res://Player/": "green"
+"res://Fonts/": "orange",
+"res://GUI/": "yellow",
+"res://Items/": "green",
+"res://Player/": "teal",
+"res://Sprites/": "blue",
+"res://World/": "purple"
 }
 
 [input]
