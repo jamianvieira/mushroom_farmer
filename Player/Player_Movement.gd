@@ -21,7 +21,8 @@ func _process(delta):
 	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
-		
+	
+
 	player.position += velocity * delta
 	player.position = player.position.clamp(Vector2.ZERO, screen_size)
 	self.velocity = velocity

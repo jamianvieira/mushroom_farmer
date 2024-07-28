@@ -5,5 +5,5 @@ func _ready():
 	item_name = "button_mushroom"
 	
 func _on_body_entered(body):
-	picked_up.emit(item_name)
+	picked_up.emit(item_name, $Sprite2D)
 	queue_free()

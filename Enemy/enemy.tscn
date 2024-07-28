@@ -459,7 +459,6 @@ initial_state = NodePath("Wander")
 script = ExtResource("16_v0fut")
 min_wander_time = 1.0
 max_wander_time = 5.0
-wander_speed = null
 
 [node name="Chase" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("17_u3ot2")

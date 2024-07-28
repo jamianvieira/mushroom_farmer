@@ -167,7 +167,6 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_k8kcu")
-metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_uf3qh")
@@ -184,7 +183,6 @@ movement = NodePath("../PlayerMovement")
 
 [node name="PlayerMovement" type="Node" parent="."]
 script = ExtResource("4_5fsdr")
-speed = 100
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("5_hqok1")
