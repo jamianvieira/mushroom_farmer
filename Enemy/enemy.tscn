@@ -437,6 +437,9 @@ radius = 5.0
 height = 18.0
 
 [node name="Enemy" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 2
+collision_mask = 11
 script = ExtResource("1_gbrr8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -459,9 +462,11 @@ initial_state = NodePath("Wander")
 script = ExtResource("16_v0fut")
 min_wander_time = 1.0
 max_wander_time = 5.0
+wander_speed = 25.0
 
 [node name="Chase" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("17_u3ot2")
+chase_speed = 50
 
 [node name="Idle" type="Node" parent="EnemyStateMachine"]
 script = ExtResource("18_ie41k")

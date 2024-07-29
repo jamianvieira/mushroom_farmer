@@ -5,5 +5,7 @@ func _ready():
 	item_name = "crimini_mushroom"
 	
 func _on_body_entered(body):
-	picked_up.emit(item_name, $Sprite2D)
-	queue_free()
+	pick_up(item_name, $Sprite2D)
+
+func _on_input_event(viewport, event, shape_idx):
+	click_pick_up(item_name, $Sprite2D, event)

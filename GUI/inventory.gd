@@ -4,7 +4,6 @@ extends Node
 var items : Dictionary = {}
 
 func item_pick_up(item_name: String, sprite: Sprite2D):
-	
 	if items.has(item_name):
 		items[item_name] += 1
 		for child in get_parent().get_node("HBoxContainer").get_children():

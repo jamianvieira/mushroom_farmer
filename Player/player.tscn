@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dl1w6i7rajsci" path="res://Sprites/Basic Charakter Spritesheet.png" id="2_db8yn"]
 [ext_resource type="Script" path="res://Player/player_animation.gd" id="3_twqls"]
 [ext_resource type="Script" path="res://Player/player_movement.gd" id="4_5fsdr"]
-[ext_resource type="Script" path="res://Player/inventory.gd" id="5_hqok1"]
+[ext_resource type="Script" path="res://GUI/inventory.gd" id="5_cheiy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uf3qh"]
 radius = 6.0
@@ -166,6 +166,8 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
+z_index = 2
+collision_mask = 14
 script = ExtResource("1_k8kcu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -185,4 +187,14 @@ movement = NodePath("../PlayerMovement")
 script = ExtResource("4_5fsdr")
 
 [node name="Inventory" type="Node" parent="."]
-script = ExtResource("5_hqok1")
+script = ExtResource("5_cheiy")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.0
+drag_top_margin = 0.0
+drag_right_margin = 0.0
+drag_bottom_margin = 0.0

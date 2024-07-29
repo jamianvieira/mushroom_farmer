@@ -7,6 +7,7 @@
 size = Vector2(16, 16)
 
 [node name="ButtonMushroom" type="Area2D"]
+collision_layer = 4
 script = ExtResource("1_os0rm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -21,3 +22,4 @@ region_enabled = true
 region_rect = Rect2(0, 128, 16, 16)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

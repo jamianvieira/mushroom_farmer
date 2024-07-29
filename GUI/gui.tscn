@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b2kdlr07sbulq"]
 
 [ext_resource type="PackedScene" uid="uid://dnyllkqv21qyv" path="res://GUI/inventory_slot.tscn" id="1_sxgc2"]
-[ext_resource type="Script" path="res://Player/inventory.gd" id="2_ypyth"]
+[ext_resource type="Script" path="res://GUI/inventory.gd" id="2_kkkx2"]
 
 [node name="GUI" type="CanvasLayer" groups=["GUI"]]
 
@@ -32,4 +32,4 @@ layout_mode = 2
 size_flags_vertical = 0
 
 [node name="Inventory" type="Node" parent="."]
-script = ExtResource("2_ypyth")
+script = ExtResource("2_kkkx2")
